@@ -1,0 +1,36 @@
+delimiter //
+create function message1()
+returns varchar(30)
+deterministic
+no sql
+reads sql data
+begin
+return 'hello world';
+end //
+delimiter ;
+
+
+delimiter //
+create function multiply(n int)
+returns int
+deterministic 
+no sql
+reads sql data
+begin
+return n*n;
+end //
+delimiter ;
+
+
+delimiter //
+create function multiply2(n int, m decimal(10,2))
+returns decimal(10,2)
+deterministic 
+no sql
+reads sql data
+begin
+return n*m;
+end //
+delimiter ;
+
+

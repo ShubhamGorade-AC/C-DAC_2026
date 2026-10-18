@@ -1,0 +1,39 @@
+delimiter //
+create procedure loop_leave()
+begin
+declare i int default 1;
+number_print : loop
+select i as number;
+set i = i+1;
+if i>6 then
+leave number_print;
+
+end if;
+end loop number_print;
+end //
+delimiter ;
+
+
+delimiter //
+create procedure do_while()
+begin
+declare i int default 1;
+while i<6 do
+select i as number;
+set i = i+1;
+end while;
+end //
+delimiter ;
+
+
+delimiter //
+create procedure repeat_until()
+begin
+declare i int default 1;
+repeat
+select i as number;
+set i = i+1;
+until i>6
+end repeat;
+end //
+delimiter ;

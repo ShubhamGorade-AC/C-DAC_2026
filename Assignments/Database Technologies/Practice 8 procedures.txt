@@ -1,0 +1,31 @@
+delimiter //
+create procedure show_sum()
+begin
+declare sum int;
+set sum = 100+200;
+select sum as sum_of_numbers;
+end //
+delimiter ;
+
+
+delimiter //
+create procedure student_show(in pri int)
+begin
+declare result int;
+select dept_id into result from student
+where pri = student_id;
+select result as department_id;
+end //
+delimiter ;
+
+
+delimiter //
+create procedure sum1(inout num int)
+begin
+set num = num + 10;
+END //
+delimiter ;
+
+set @number = 10;
+call sum1(@number);
+select @number as total_sum;

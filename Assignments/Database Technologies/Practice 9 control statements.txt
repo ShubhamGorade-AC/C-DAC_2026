@@ -1,0 +1,62 @@
+delimiter //
+create procedure result(in mark int)
+begin
+if mark>50 then
+select 'pass' as resultfinal;
+end if;
+end //
+delimiter ;
+
+call result(80);
+
+
+
+delimiter //
+create procedure oddoreven(in num int)
+begin
+declare result varchar(20);
+if mod(num,2)=0 then
+set result = 'even';
+else 
+set result = 'odd';
+end if;
+select result as total_result;
+end //
+delimiter ;
+
+
+delimiter //
+create procedure student_grade3(in stu int)
+begin
+declare namee varchar(20);
+declare grade varchar(3);
+declare id int;
+declare dept_i int;
+
+select student_id, name, dept_id into id, namee, dept_i from student
+where stu=student_id;
+
+-- calculate grade
+if dept_i is null then
+select 'id are invalid' as message;
+elseif dept_i <=10 then
+set grade = 'a';
+elseif dept_i <=20 then
+set grade = 'b';
+else 
+set grade = 'd';
+end if;
+
+if dept_i is not null then
+select id as idstu,
+grade as gradee,
+namee as nameee,
+dept_i as iddept;
+end if;
+
+end //
+delimiter ;
+
+
+
+
