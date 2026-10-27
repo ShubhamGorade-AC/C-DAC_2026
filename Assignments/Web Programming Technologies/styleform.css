@@ -1,0 +1,54 @@
+*{
+    font-family: 'Segoe Ui Light';
+}
+
+#logincontainer{
+    width:500px;
+    height:400px;
+    background-color: white;
+    margin: 90px auto;
+    text-align: center;
+    border-radius: 20px;
+}
+
+body{
+    background: linear-gradient(#673AB7,#F44336);
+}
+
+#loginheading {
+    padding-top:25px;
+}
+
+.forminput{
+    width:65%;
+    margin-bottom: 20px;
+    padding : 15px 10px;
+    border-width: 0;
+    border-bottom-width: 1px ;
+    border-bottom-color: #F44336;
+    border-bottom-style: solid;
+    outline: none;
+}
+
+#formbutton {
+    margin-top: 20px;
+    width: 20%;
+    padding: 12px 10px;
+    border: 0;
+    background-color: rgb(244, 75, 75);
+    color:aliceblue;
+    border-radius: 30px;
+    transition: background 300ms; 
+}
+
+#formbutton:hover {
+    background: white;
+    color:#F44336 ;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #F44336;
+}
+
+#formsignup {
+    text-decoration: none;
+}
